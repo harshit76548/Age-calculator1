@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="harshit.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1 class="title">Age Calculator</h1>
+      <p class="subtitle">Enter your date of birth to find your age</p>
+    </header>
+
+    <div class="card">
+      <div class="input-group">
+        <label for="dob" class="input-label">Date of Birth</label>
+        <input type="date" id="dob" class="date-input" />
+      </div>
+
+      <div class="input-group">
+        <label for="calcDate" class="input-label">Calculate Age On</label>
+        <input type="date" id="calcDate" class="date-input" />
+      </div>
+
+      <button class="btn" id="calcBtn" onclick="calculateAge()">Calculate Age</button>
+    </div>
+
+    <div class="results" id="results">
+
+      <div class="result-primary">
+        <div class="age-display">
+          <span class="age-number" id="ageYears">--</span>
+          <span class="age-label">years old</span>
+        </div>
+        <div class="age-sub">
+          <span id="ageMonths">--</span> months &nbsp;&middot;&nbsp;
+          <span id="ageDays">--</span> days
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">&#128197;</div>
+          <div class="stat-value" id="totalMonths">--</div>
+          <div class="stat-label">Total Months</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">&#128467;</div>
+          <div class="stat-value" id="totalDays">--</div>
+          <div class="stat-label">Total Days</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">&#9200;</div>
+          <div class="stat-value" id="totalHours">--</div>
+          <div class="stat-label">Total Hours</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">&#9889;</div>
+          <div class="stat-value" id="totalMinutes">--</div>
+          <div class="stat-label">Total Minutes</div>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <div class="info-chip">
+          <span>&#127874;</span>
+          <span id="nextBdayText">--</span>
+        </div>
+        <div class="info-chip">
+          <span id="zodiacIcon">&#11088;</span>
+          <span id="zodiacText">--</span>
+        </div>
+        <div class="info-chip">
+          <span>&#127749;</span>
+          <span id="dayText">Born on a --</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="error-msg" id="errorMsg"></p>
+
+  </div>
+
+  <script src="harshit.js"></script>
+</body>
+</html>
